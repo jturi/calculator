@@ -11,8 +11,8 @@ exports.calculate = function(req, res) {
   });
 
   var operations = {
-   // Here added more operations
-    'add':      function(a,b) { return a + b },
+   // Pluse sign before a and b is necessary for the operation to perform as expected
+    'add':      function(a,b) { return +a + +b },
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
